@@ -152,16 +152,45 @@ h3
 
 blockquote
 {
+    font-size: 24px;
     margin: 32px 0;
+    padding-left: 16px;
+    border-left: 4px solid var(--gray30);
+    line-height: 24px;
+    font-family: var(--fontFamily);
+}
+
+blockquote span
+{
+    color: var(--gray10);
+}
+
+blockquote span::before
+{
+    content: '-';
 }
 
 pre
 {
     background: #fec62e;
+    padding: 40px;
+    font-family: var(--fontFamily);
+    line-height: 24px;
 }
 
 .hero
 {
     background: linear-gradient(to top, rgba(255,255,255,.3), transparent), url(../images/pattern.png);
     height: 350px;
+}
+
+.wrapper
+{
+    width: 902px;
+    margin: auto;
+}
+
+.main-content
+{
+    padding: 20px;
 }
