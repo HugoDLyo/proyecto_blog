@@ -179,3 +179,36 @@ pre
     max-inline-size: 902px; /*width*/
     margin: auto;
 }
+
+.slaider-container
+{
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video
+{
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list
+{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet
+{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background-color: var(--white30);
+    border-radius: 50%;
+}
