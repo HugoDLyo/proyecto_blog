@@ -212,3 +212,28 @@ pre
     background-color: var(--white30);
     border-radius: 50%;
 }
+
+.form input
+{
+    inline-size: 100%;
+    border: 1px solid var(--white30);
+    background-color: #251f24;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--white30);
+    font-size: 16px;
+    margin-block-end: 24px;
+}
+
+.form input[type="submit"] 
+{
+    background-color: #157efb;
+    border: none;
+}
+
+.form input::-webkit-input-placeholder
+{
+    color: var(--white20);
+}
