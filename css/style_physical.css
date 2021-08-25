@@ -145,6 +145,7 @@ h3
 .section-content img
 {
     margin-top: 40px;
+    max-width: 100%;
 }
 
 .section-content h3

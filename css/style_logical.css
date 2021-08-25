@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root
+{
+    font-size: 18px;
+    --white30: #fff;
+    --white20: #a5a3a5;
+    --white10: #3a3539;
+    --fontFamily: 'Nunito', sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    color: var(--white30);
+    font-family: var(--fontFamily);
+    background-color: #251f24;
+    margin: 0;
+}
+
+a
+{
+    color: var(--white30);
+}
+
+p
+{
+    color: var(--white20);
+}
+
+hr
+{
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2);
+}
+
+.header
+{
+    position: sticky;
+    inset-block-start: -45px;
+}
+
+.header-content
+{
+    position: relative;
+    inset-block-start: 65px;
+}
+
+header
+{
+    font-size: 14px;
+    color: var(--white30);
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -208px;
+    width: 188px;
+
+
+    /* inset-block-start:; TOP
+    inset-block-end:; BOTTOM
+    inset-inline-start:; LEFT
+    inset-inline-end:; RIGHT */
+}
+
+header li 
+{
+    color: var(--white20);
+    margin-block-end: 16px;
+}
+
+header a
+{
+    color: var(--white20);
+    text-decoration: none;
+}
+
+header a:hover
+{
+    color: var(--white30);
+}
+
+nav details summary
+{
+    font-weight: bold;
+}
+
+.main-content
+{
+    padding-inline: 16px;
+}
+
+.main hr
+{
+    display: none;
+}
+
+h1
+{
+    font-size: 60px; /*3.75em*/
+    margin-block-start: 64px;
+    margin-block-end: 16px;
+}
+
+h2
+{
+    font-size: 32px; /*2em*/
+    margin-block: 40px;
+}
+
+h3
+{
+    font-size: 24px; /*1.5em*/
+    margin-block: 16px;
+}
+
+.section-content
+{
+    counter-reset: titleList;
+}
+
+.section-content h3
+{
+    counter-increment: titleList;
+}
+
+.section-content h3::before
+{
+    content: counter(titleList) ". ";
+}
+
+.section-content img
+{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+}
+
+blockquote
+{
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    background-color: var(--white10);
+    border-radius: 8px;
+    line-height: 32px;
+    font-size: 24px;
+    padding-inline: 24px;
+    padding-block: 24px;
+}
+
+blockquote p 
+{
+    color: var(--white30);
+}
+
+pre
+{
+    background-color: var(--white10);
+    padding-inline: 40px;
+    padding-block: 40px;
+    /* overflow: auto; */
+    border-radius: 8px;
+    border: 10px solid #5551ff;
+    box-shadow: -10px 10px 0 0 #abaaf6;
+    margin-block-end: 30px;
+}
+
+.hero
+{
+    background-image: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+    height: 350px;
+}
+
+.wrapper
+{
+    max-inline-size: 902px; /*width*/
+    margin: auto;
+}
