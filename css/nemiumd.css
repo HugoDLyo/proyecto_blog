@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+:root
+{
+    font-size: 18px;
+    --body: #fff;
+    --title: #212121;
+    --text: #616161;
+    
+    --cita: #424242;
+    --negro: #000;
+
+    --boder: #5551ff;
+    --shadow: #abaaf6;
+    --fontFamily: 'Rubik', sans-serif;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar 
+{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 0 0 var(--text);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background: var(--text);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumbhover {
+    background: var(--title);
+}
+
+
+body
+{
+    color: var(--title);
+    font-family: var(--fontFamily);
+    background-color: var(--body);
+    margin: 0;
+}
+
+.active a
+{
+    background-color: var(--negro);
+    padding: 5px 6px;
+    color: var(--body);
+}
+
+a
+{
+    color: var(--title);
+}
+
+p
+{
+    color: var(--text);
+}
+
+hr
+{
+    margin-block: 40px;
+    border-color: rgba(97, 97, 97, 0.2);
+}
+
+.header-content
+{
+    padding-inline: 20px;
+}
+
+header
+{
+    font-size: 14px;
+    color: var(--title);
+    margin-block-start: 20px;
+}
+
+header li 
+{
+    color: var(--text);
+    margin-block-end: 16px;
+}
+
+header a
+{
+    color: var(--text);
+    text-decoration: none;
+}
+
+header a:hover
+{
+    color: var(--title);
+}
+
+nav details summary
+{
+    font-weight: bold;
+    color: var(--text);
+}
+
+.main-content
+{
+    padding-inline: 16px;
+}
+
+.main hr
+{
+    display: none;
+}
+
+h1
+{
+    font-size: 40px; /*3.75em*/
+    margin-block-start: 20px;
+    margin-block-end: 16px;
+    color: var(--negro);
+}
+
+h2
+{
+    font-size: 32px; /*2em*/
+    margin-block: 40px;
+    color: var(--negro);
+}
+
+h3
+{
+    font-size: 24px; /*1.5em*/
+    margin-block: 16px;
+    color: var(--cita);
+}
+
+.section-content
+{
+    counter-reset: titleList;
+}
+
+.section-content p
+{
+    color: var(--cita);
+}
+
+.section-content p span
+{
+    color: var(--boder);
+}
+
+.section-content h3
+{
+    counter-increment: titleList;
+}
+
+.section-content h3::before
+{
+    content: counter(titleList) ". ";
+}
+
+.section-content img
+{
+    margin-block-start: 40px;
+    display: inline-block;
+    max-inline-size: 100%;
+    text-align: center;
+}
+
+.section-content ul li
+{
+    color: var(--boder);
+}
+
+.section-content ul li p
+{
+    margin: 0;
+}
+
+.section-content blockquote
+{
+    margin-block-start: 80px;
+    margin-block-end: 63px;
+    /* background-color: var(--cita); */
+    border-left: 5px solid var(--boder);
+    /* border-radius: 8px; */
+    line-height: 32px;
+    font-size: 16px;
+    padding-inline: 24px;
+    padding-block: 24px;
+    text-align: left;
+}
+
+.section-content blockquote p 
+{
+    color: var(--negro);
+}
+
+.section-content blockquote span
+{
+    color: var(--negro);
+}
+
+.section-content blockquote span::before
+{
+    content: '-';
+}
+
+pre
+{
+    background-color: #e5e5e5;
+    color: var(--cita);
+    padding-inline: 40px;
+    padding-block: 40px;
+    overflow: auto;
+    border-radius: 8px;
+    border: 10px solid var(--boder);
+    box-shadow: -10px 10px 0 0 var(--shadow);
+    margin-block-end: 30px;
+    font-size: 16px;
+    line-height: 16px;
+    font-family: var(--fontFamily);
+    text-align: left;
+}
+
+.hero
+{
+    background-image: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url('../images/patron-2.png');
+    block-size: 100px;
+}
+
+.wrapper
+{
+    max-inline-size: 902px; /*width*/
+    margin: auto;
+}
+
+.slaider-container
+{
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video
+{
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list
+{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet
+{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background-color: var(--boder);
+    opacity: .2;
+    border-radius: 50%;
+}
+
+.info
+{
+    color: var(--title);
+}
+
+.info a
+{
+    color: var(--blue);
+}
+
+.label
+{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.label
+{
+    position: relative;
+}
+
+.enviar
+{
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+}
+
+.label input,
+.enviar input
+{
+    inline-size: 100%;
+    border: 1px solid var(--negro);
+    background-color: var(--body);
+    box-sizing: border-box;
+    border-radius: 90px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--cita);
+    font-size: 16px;
+    margin-block-end: 24px;
+    width: 100%;
+}
+
+.enviar input[type="submit"] 
+{
+    background-color: var(--boder);
+    color: var(--body);
+    width: 119px;
+    border: none;
+}
+
+.form input::-webkit-input-placeholder
+{
+    color: var(--cita);
+}
+
+.footer
+{
+    background-color: var(--title);
+    text-align: center;
+}
+
+.footer p, 
+.footer a
+{
+    color: var(--body);
+    text-decoration: none;
+}
+
+.footer p
+{
+    font-size: 20px;
+}
+
+footer
+{
+    padding-block: 44px;
+    margin-block-start: 16px;
+}
+
+.centrar
+{
+    text-align: center;
+}
+
+@media screen and (min-width: 1366px) {
+    .header {
+        position: sticky;
+        inset-block-start: -45px;
+    }
+
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+
+    header {
+        font-size: 14px;
+        color: var(--title);
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-end: -208px;
+        /* inset-inline-start: -208px; */
+        width: 188px;
+
+        /* inset-block-start:; TOP
+        inset-block-end:; BOTTOM
+        inset-inline-start:; LEFT
+        inset-inline-end:; RIGHT */
+    }
+
+    h1 {
+        font-size: 60px;
+        margin-block-start: 64px;
+    }
+
+    .hero {
+        block-size: 350px;
+    }
+
+    blockquote {
+        font-size: 24px;
+    }
+
+    .label {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 633px;
+    }
+
+    .label input,
+    .enviar input {
+        width: 280px;
+    }
+
+
+    .footer p {
+        font-size: 30px;
+    }
+
+    footer {
+        margin-block-start: 56px;
+    }
+}
