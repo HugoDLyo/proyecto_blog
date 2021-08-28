@@ -1,85 +1,128 @@
-@font-face
-{
-    font-family: charter;
-    src: url('../fonts/charter-regular.otf');
-    font-style: normal;
-    font-weight: 400;
-}
-
-@font-face
-{
-    font-family: charter;
-    src: url('../fonts/charter-italic.otf');
-    font-style: italic;
-    font-weight: 400;
-}
-
-@font-face
-{
-    font-family: charter;
-    src: url('../fonts/charter-bold.otf');
-    font-style: normal;
-    font-weight: 700;
-}
-
-@font-face
-{
-    font-family: charter;
-    src: url('../fonts/charter-bold-italic.otf');
-    font-style: italic;
-    font-weight: 700;
-}
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 :root
 {
     font-size: 18px;
-    --gray30: #212121;
-    --gray20: #212429;
-    --gray10: #616161;
-    --fontFamily: charter
+    --fontFamily: 'Handlee', cursive;
+
+    --body: #363b40;
+    --text: #fffffe;
+    --white: #fff;
+    --hover: #008080;
+    --shadow: #b8bfc6;
+    --vine: #750D37;
+}
+
+html
+{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar 
+{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track 
+{
+    box-shadow: inset 0 0 0 var(--body);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background-color: var(--vine);
+    border-radius: 8px;
 }
 
 body
 {
-    color: var(--gray30);
     font-family: var(--fontFamily);
+    margin: 0;
+    background-color: var(--body);
 }
 
-a
+.wrapper
 {
-    color: var(--gray30);
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
 }
 
-header
+.hero
 {
-    font-size: 14px;
-    color: var(--gray10);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: 'Great Vibes', cursive;
+    color: var(--vine);
 }
 
-header a
+.layout
 {
-    color: var(--gray10);
-    text-decoration: none;
-}
-
-header a:hover
-{
-    color: var(--gray30);
+    display: flex;
+    flex-direction: column;
 }
 
 nav details summary
 {
-    font-weight: bold;
+    font-weight: 700;
 }
 
-h1
+.header-content
 {
-    font-size: 60px; /*3.75em*/
+    margin-block-start: 20px;
+    margin-block-end: 20px;
+}
+
+header,
+header a
+{
+    font-size: 16px;
+    color: var(--text);
+    text-decoration: none;
+}
+
+header li
+{
+    padding-block-end: 12px;
+}
+
+header a:hover
+{
+    color: var(--hover);
+}
+
+.active
+{
+    background-color: #7d3c98;
+    opacity: .5;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.title
+{
+    font-size: 32px;
+    text-align: center;
+    color: var(--text);
+}
+
+p
+{
+    color: var(--text);
 }
 
 h2
 {
-    font-size: 32px; /*2em*/
+    font-size: 26px;
+    color: var(--text);
+    margin-block-start: 30px;
+    margin-block-end: 30px;
 }
 
 .section-content
@@ -89,8 +132,9 @@ h2
 
 .section-content h3
 {
-    font-size: 24px; /*1.5em*/
+    font-size: 22px;
     counter-increment: titleList;
+    color: var(--text);
 }
 
 .section-content h3::before
@@ -107,13 +151,205 @@ h2
     display: inline-block;
 }
 
-pre
+.section-info
 {
-    background: #fec62e;
+    -webkit-box-shadow: 0px 15px 15px -9px var(--shadow); 
+    box-shadow: 0px 15px 15px -9px var(--shadow);
+    padding: 10px;
+    margin-block-end: 20px;
 }
 
-.hero
+blockquote
 {
-    background: linear-gradient(to top, rgba(255,255,255,.3), transparent), url(../images/pattern.png);
-    height: 350px;
+    padding-block: 30px;
+    padding-inline: 20px;
+    margin: 0;
+    border-left: 5px solid var(--shadow);
+    font-family: var(--fontFamily);
+}
+
+pre
+{
+    border-radius: 53px;
+    background: linear-gradient(315deg, #31353a, #3a3f44);
+    box-shadow:  -15px -15px 46px #1d1f22,
+                15px 15px 46px #4f575e;
+    padding-inline: 40px;
+    padding-block: 40px;
+    overflow: auto;
+    color: var(--text);
+    font-size: 16px;
+    font-family: var(--fontFamily);
+}
+
+.section-content img
+{
+    margin-block-start: 40px;
+    display: block;
+    max-inline-size: 100%;
+}
+
+.section-content ol li,
+.section-content ul li
+{
+    color: var(--text);
+}
+
+.slaider-container
+{
+    display: block;
+    overflow: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    font-size: 0;
+}
+
+.video
+{
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.slider-bullet-list
+{
+    text-align: center;
+    margin-block-start: 10px;
+}
+
+.slider-bullet
+{
+    display: inline-block;
+    inline-size: 15px;
+    block-size: 15px;
+    background-color: var(--vine);
+    border-radius: 50%;
+}
+
+.info a
+{
+    color: var(--vine);
+    background-color: rgba(0, 128, 128, 0.5);
+    padding: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.label
+{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.label
+{
+    position: relative;
+}
+
+.enviar
+{
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+}
+
+.label input,
+.enviar input
+{
+    inline-size: 100%;
+    border: 1px solid var(--white);
+    background-color: transparent;
+    box-sizing: border-box;
+    border-radius: 90px;
+    padding-inline: 16px;
+    padding-block: 12px;
+    color: var(--text);
+    font-size: 16px;
+    margin-block-end: 24px;
+    width: 100%;
+}
+
+.enviar input[type="submit"] 
+{
+    background-color: var(--vine);
+    color: var(--text);
+    border: 1px solid var(--white);
+    width: 119px;
+    border: none;
+}
+
+.form input::-webkit-input-placeholder
+{
+    color: var(--text);
+}
+
+.footer
+{
+    background-color: var(--shadow);
+    text-align: center;
+}
+
+.footer p, 
+.footer a
+{
+    color: var(--vine);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer p
+{
+    font-size: 20px;
+}
+
+footer
+{
+    padding-block: 44px;
+    margin-block-start: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        position: sticky;
+        inset-block-start: -45px;
+    }
+
+    .header-content {
+        position: relative;
+        inset-block-start: 65px;
+        padding-inline: 0;
+    }
+
+    header {
+        font-size: 14px;
+        /* color: var(--title); */
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-start: -208px;
+        width: 188px;
+    }
+
+    .hero {
+        font-size: 50px;
+        height: 300px;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .label {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 633px;
+    }
+
+    .label input,
+    .enviar input {
+        width: 290px;
+    }
 }
