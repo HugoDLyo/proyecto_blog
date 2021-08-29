@@ -93,7 +93,7 @@ nav details summary
 
 h1
 {
-    font-size: 60px; /*3.75em*/
+    font-size: 40px; /*3.75em*/
     margin-top: 64px;
     margin-bottom: 16px;
 }
@@ -137,7 +137,8 @@ h3
 .section-content img
 {
     margin-top: 40px;
-    max-width: 100%;
+    max-inline-size: 100%;
+    display: block;
 }
 
 .section-content h3
@@ -207,12 +208,13 @@ pre
 .hero
 {
     background: linear-gradient(to top, rgba(255,255,255,.3), transparent), url(../images/pattern.png);
-    height: 350px;
+    height: 100px;
 }
 
 .wrapper
 {
-    width: 902px;
+    max-width: 902px;
+    width: 90%;
     margin: auto;
 }
 
